@@ -1,0 +1,10 @@
+extends layout
+
+block content
+
+  h1.well= places.address
+
+  img(src="https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyCyl38pBs1i_I5_3Jzg9BunEfo3bQ5uyYw")
+
+  button(type="link" class='btn btn-lg btn-info')
+    a(href='/') index

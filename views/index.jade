@@ -1,0 +1,30 @@
+extends layout
+
+block content
+ 
+ h1.well The Wonderful World of Maps
+
+ div(id="map-canvas")
+ 
+
+ table.table.table-striped
+   thead
+     tr
+       th Address
+       th Latitude
+       th Longitude
+       th Delete
+   tbody
+    for data in allPlaces
+      tr
+        td
+          a(href='/'+data._id)= data.address
+        td= data.latitude  
+        td= data.longitude
+        td
+          form(action='/'+data._id+ '/delete' method='post')
+              Button(type="submit" value="delete" class="btn btn-xs btn-danger") Delete
+
+
+  button(type="link" class='btn btn-lg btn-info')
+    a(href='/new') New

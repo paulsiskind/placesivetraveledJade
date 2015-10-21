@@ -1,0 +1,23 @@
+extends layout
+
+block content
+
+  h1.well Where Have You Been?
+
+
+  form(action='/', method='post')
+    .form-group
+      label Address
+      input.form-control(type="text" name="address" id="address")
+      br
+    .form-group
+      label Latitude 
+      input.form-control(type="text" name="latitude" id="latitude")
+      br
+    .form-group
+      label Longitude
+      input.form-control(type="text" name="longitude" id="longitude")
+      br
+    Button(type="submit" class="btn btn-success") Submit
+    button(type="link" class='btn btn-info')
+      a(href='/') index
